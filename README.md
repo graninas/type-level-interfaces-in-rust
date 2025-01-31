@@ -27,6 +27,13 @@ This post accompanies my recent talk at Functional Conf 2025: *Type-Level Interf
 
 I’m also the author of *Functional Design and Architecture* (Manning Publications, 2024), a deep and advanced book that I can’t help but recommend. It’s a great resource for those who love functional programming and want to explore practical approaches structured into comprehensive, well-organized knowledge. My goal was ambitious: to consolidate FP ideas into a methodology that could finally serve as a true counterpart to Object-Oriented Design. I call it *Functional Declarative Design*—the missing link between functional programming and software engineering. You can buy FDaA at [Manning](https://www.manning.com/books/functional-design-and-architecture) or on [Amazon](https://www.amazon.com/Functional-Design-Architecture-Alexander-Granin/dp/1617299618).
 
+<p float="left">
+  <a href="https://leanpub.com/pragmatic-type-level-design">
+    <img src="https://github.com/graninas/Pragmatic-Type-Level-Design/blob/96f16ab0c9d23e407653869801725b8cca130356/PTLD%20cover-labeled.png" width="200"></a>
+  <a href="https://www.manning.com/books/functional-design-and-architecture">
+    <img src="https://github.com/graninas/Functional-Design-and-Architecture/blob/91ace7d9a3756d0472fa8b046eb345a176914a84/Manning-Publications/FDaA%20Manning%20cover.png" width="200"></a>
+</p>
+      
 Finally, **I’m interested in writing an entire book on type-level design in Rust.** A sustainable support of the PTLD book will give me a good argument for dedicating another two-three years of my life to this. Advanced yet approachable books are super difficult and super expensive to write.
 
 Lookup the repo for the code in this post: [tic-tac-toe-web](https://github.com/graninas/type-level-interfaces-in-rust/tree/main/tic-tac-toe-web).
