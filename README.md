@@ -472,6 +472,6 @@ I’m also considering writing a **dedicated book on type-level programming in R
 
 ## Contact me
 
-* X: @graninas
+* X: [@graninas](https://x.com/graninas)
 * LinkedIn: [linkedin.com/in/graninas](https://www.linkedin.com/in/graninas)
 * Email: graninas@gmail.com
