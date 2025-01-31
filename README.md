@@ -14,6 +14,7 @@ Type-level interfaces are an approach for making extensible and modular type-lev
 * [Type-level interfacing mechanism](#Type-level-interfacing-mechanism)
 * [Interpretation and the universal evaluation mechanism](#Interpretation-and-the-universal-evaluation-mechanism)
 * [Conclusion](#Conclusion)
+* [Further reading](#Further-reading)
 * [Contact me](#Contact-me)
 
 ## Intro
@@ -462,6 +463,8 @@ All of this forms the foundation of the methodology I call *Pragmatic Type-Level
 If *PTLD* reaches **1,000 readers** (*which is a lot!*), I’ll add four more chapters and expand the coverage to two additional languages, beyond Haskell, Rust, and Scala 3, that support these techniques.
 
 I’m also considering writing a **dedicated book on type-level programming in Rust**, but I can only do that if there’s clear commercial potential. Writing advanced, rare books is incredibly time-consuming and expensive. If you want to see more work like this, please support my current book—it benefits everyone.
+
+## Further reading
 
 * [Pragmatic Type-Level Design (LeanPub, 2024)](https://leanpub.com/pragmatic-type-level-design)
 * [PTLD's repo](https://github.com/graninas/Pragmatic-Type-Level-Design)
