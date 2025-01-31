@@ -236,7 +236,7 @@ trait IInterface<I> {
 }
 ```
 
-Instead, we use the Wrapper and its IInterface instance for the trick.
+Instead, we use `Wrapper` and its `IInterface` instance for the trick.
 
 ```rust
 struct Wrapper<I, T> (PhantomData::<(I, T)>);
@@ -397,11 +397,11 @@ impl<Method, Path, Clauses, Formats, ReturnType>
 }
 ```
 
-The example demonstrates how to invoke interpreters for each field, but having numerous small interpreters isn’t mandatory. Some domain concepts may have dedicated interpreters, while others can be processed together (for example, *Method* and *Path* in the snippet). The way you design your interpreters depends on the eDSL and the final outcome you want to achieve. Each interpreter will perform different tasks, but all will follow a uniform structure.
+The example demonstrates how to invoke interpreters for each field, but having numerous small interpreters isn’t mandatory. Some domain concepts may have dedicated interpreters, while others can be processed together (for example, `Method` and `Path` in the snippet). The way you design your interpreters depends on the eDSL and the final outcome you want to achieve. Each interpreter will perform different tasks, but all will follow a uniform structure.
 
 The `Eval` type class, along with the compiler, will handle your distinct yet consistently interfaced implementation types. The compiler will correctly select the appropriate instance for a wrapped implementation type or stop the compilation if one is missing.
 
-The following two interpreters convert HTTP methods into strings. One of them will be invoked for *Method*, depending on the content of the `IInterface<IMethod>` field:
+The following two interpreters convert HTTP methods into strings. One of them will be invoked for `Method`, depending on the content of the `IInterface<IMethod>` field:
 
 ```rust
 impl Eval<TinyBuildMethod, String>
