@@ -4,7 +4,7 @@
 
 * [Intro](#Intro)
 * [Type-level eDSLs](#Type-level-eDSLs)
-* [Why type-level eDSLs?](#Why-type-level-eDSLs-)
+* [Why type-level eDSLs?](#Why-type-level-eDSLs)
 * [Type-level domain modeling](#Type-level-domain-modeling)
 * [Domain modeling with type-level interfaces](#Domain-modeling-with-type-level-interfaces)
 * [Type-level interfacing mechanism](#Type-level-interfacing-mechanism)
