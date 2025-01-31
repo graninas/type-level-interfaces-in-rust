@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Type-level interfaces are an approach for making extensible and modular type-level eDSLs. This article demonstrates the approach in Rust.
+Type-level interfaces are an approach for making extensible and modular type-level eDSLs. Type-level interfaces make type-level programming simple and understandable. This article demonstrates the approach in Rust.
 
 ## Table of Contents
 
