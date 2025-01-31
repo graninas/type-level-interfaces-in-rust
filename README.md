@@ -2,15 +2,15 @@
 
 ## Table of Contents
 
-* (Intro)[#Intro]
-* (Type-level eDSLs)[#Type--level-eDSLs]
-* (Why type-level eDSLs?)[#Why-type--level-eDSLs-]
-* (Type-level domain modeling)[#Type--level-domain-modeling]
-* (Domain modeling with type-level interfaces)[#Domain-modeling-with-type--level-interfaces]
-* (Type-level interfacing mechanism)[#Type--level-interfacing-mechanism]
-* (Interpretation and the universal evaluation mechanism)[#Interpretation-and-the-universal-evaluation-mechanism]
-* (Conclusion)[#Conclusion]
-* (Contact me)[#Contact-me]
+* [Intro](#Intro)
+* [Type-level eDSLs](#Type--level-eDSLs)
+* [Why type-level eDSLs?](#Why-type--level-eDSLs-)
+* [Type-level domain modeling](#Type--level-domain-modeling)
+* [Domain modeling with type-level interfaces](#Domain-modeling-with-type--level-interfaces)
+* [Type-level interfacing mechanism](#Type--level-interfacing-mechanism)
+* [Interpretation and the universal evaluation mechanism](#Interpretation-and-the-universal-evaluation-mechanism)
+* [Conclusion](#Conclusion)
+* [Contact me](#Contact-me)
 
 I invented type-level interfaces for Haskell, Rust, and Scala 3 while working on my third book, [*Pragmatic Type-Level Design*](https://leanpub.com/pragmatic-type-level-design) (Leanpub, 2024). My goal was to make type-level programming simple, approachable, and practical—and I succeeded in all three languages. Type-level programming is no longer dark magic. With my universal methodology, you can start crafting useful applications based on powerful, compile-time, statically verifiable, and truly extensible type-level eDSLs.
 
