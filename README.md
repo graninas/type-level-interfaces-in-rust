@@ -12,6 +12,8 @@
 * [Conclusion](#Conclusion)
 * [Contact me](#Contact-me)
 
+## Intro
+
 I invented type-level interfaces for Haskell, Rust, and Scala 3 while working on my third book, [*Pragmatic Type-Level Design*](https://leanpub.com/pragmatic-type-level-design) (Leanpub, 2024). My goal was to make type-level programming simple, approachable, and practical—and I succeeded in all three languages. Type-level programming is no longer dark magic. With my universal methodology, you can start crafting useful applications based on powerful, compile-time, statically verifiable, and truly extensible type-level eDSLs.
 
 This post briefly outlines the approach and accompanies my recent talk at Functional Conf 2025: *Type-Level Interfaces in Haskell and Rust: Type-Level eDSLs* ([slides](https://docs.google.com/presentation/d/1Pi_p_a8Wvbl1MXNl_VsDMxcsSYq8FUPghZk8seVOvcs/edit?usp=sharing), [code](https://github.com/graninas/Pragmatic-Type-Level-Design/tree/96f16ab0c9d23e407653869801725b8cca130356/First-Edition/functional_conf_2025)). I omit many details here; consider reading the book. You can buy it on Leanpub with today’s special 50% discount using [this link](https://leanpub.com/pragmatic-type-level-design/c/rust_promo_50). The offer expires in three days. If you're unsure, you can first download a substantial 90-page free sample chapter and decide. Its model language is Haskell, but there are special Rosetta Stone chapters with Rust and Scala 3.
