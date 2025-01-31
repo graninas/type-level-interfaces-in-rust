@@ -469,9 +469,7 @@ Type-level programming is not easy. I’ve only scratched the surface, but many 
 
 All of this forms the foundation of the methodology I call *Pragmatic Type-Level Design*. You can learn it in depth from my book, where these topics are systematically structured and illustrated with fun, well-elaborated examples.
 
-If *PTLD* reaches **1,000 readers** (*which is a lot!*), I’ll add four more chapters and expand the coverage to two additional languages, beyond Haskell, Rust, and Scala 3, that support these techniques.
-
-I’m also considering writing a **dedicated book on type-level programming in Rust**, but I can only do that if there’s clear commercial potential. Writing advanced, rare books is incredibly time-consuming and expensive. If you want to see more work like this, please support my current book—it benefits everyone.
+If *PTLD* reaches **1,000 readers** (*which is a lot!*), I’ll add four more chapters and expand the coverage to two additional languages, beyond Haskell, Rust, and Scala 3, that support these techniques. If *PTLD* reaches **2000 readers**, I will write a big book about type-level programming solely in Rust. If you support me—it benefits everyone.
 
 ## Further reading
 
