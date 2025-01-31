@@ -1,17 +1,16 @@
 # Type-level interfaces in Rust
 
-### Table of Contents
+## Table of Contents
 
-* **Intro**
-* **Type-level eDSLs**
-* **Why type-level eDSLs?**
-* **Type-level domain modeling**
-* **Domain modeling with type-level interfaces**
-* **Type-level interfacing mechanism**
-* **Interpretation and the universal evaluation mechanism**
-* **Conclusion**
-* **Contact me**
-* **Intro**
+* (**Intro**)[#Intro]
+* (**Type-level eDSLs**)[#Type--level-eDSLs]
+* (**Why type-level eDSLs?**)[#Why-type--level-eDSLs-]
+* (**Type-level domain modeling**)[#Type--level-domain-modeling]
+* (**Domain modeling with type-level interfaces**)[#Domain-modeling-with-type--level-interfaces]
+* (**Type-level interfacing mechanism**)[#Type--level-interfacing-mechanism]
+* (**Interpretation and the universal evaluation mechanism**)[#Interpretation-and-the-universal-evaluation-mechanism]
+* (**Conclusion**)[#Conclusion]
+* (**Contact me**)[#Contact-me]
 
 I invented type-level interfaces for Haskell, Rust, and Scala 3 while working on my third book, [*Pragmatic Type-Level Design*](https://leanpub.com/pragmatic-type-level-design) (Leanpub, 2024). My goal was to make type-level programming simple, approachable, and practical—and I succeeded in all three languages. Type-level programming is no longer dark magic. With my universal methodology, you can start crafting useful applications based on powerful, compile-time, statically verifiable, and truly extensible type-level eDSLs.
 
@@ -23,7 +22,9 @@ Finally, I’m interested in writing an entire book on type-level design in Rust
 
 You'll find the code for this post in the same repository.
 
-### **Type-level eDSLs**
+<img title="Methodologies" src="https://github.com/graninas/type-level-interfaces-in-rust/blob/99f89879621e26ccda54e2d9e55368432e8af726/images/methodologies.png" width="600"></a>
+
+## **Type-level eDSLs**
 
 In Haskell, there’s *Servant*—a well-known type-level HTTP API. You define your routes entirely at the type level, using types and nothing but types. Below are the three methods of a Tic-Tac-Toe game API.
 
@@ -92,7 +93,7 @@ type GoLRule = Rule<
 
 The Tic-Tac-Toe API, GoL rule, and other eDSLs will have a similar structure and won’t require deep learning, as type-level interfaces serve as a universal design pattern. Now, let’s explore what else makes these eDSLs remarkable.
 
-### **Why type-level eDSLs?**
+## **Why type-level eDSLs?**
 
 Traditional, old-school value-level approaches certainly work. Encoding an HTTP API as a collection of ADTs and functions is straightforward, and most web server libraries follow this approach. They provide either an FP-like or OO-like set of tools for declaring APIs. *Tiny-http* in Rust, for example, keeps things simple and doesn’t rely heavily on type-level features. In contrast, *Axum* enforces some level of correctness and type safety through additional typing. However, neither comes close to the fully type-level design of *Servant*.
 
@@ -109,7 +110,7 @@ Type-level eDSLs have several properties that make them particularly useful in c
 * **Compile-time correctness checking.** If you need additional guarantees, you can connect your model to type-level validation algorithms that verify invariants at compile time. *(We’ll skip this topic here, but you can find more details in PTLD.)*
 * **Compile-friendly.** The type-level interface approach is extremely simple for the compiler to process—no deep type inference is required, and no complex ambiguities need to be resolved. While large type-level models may have other drawbacks, slow compilation is not one of them.
 
-### **Type-level domain modeling**
+## **Type-level domain modeling**
 
 We typically solve programming problems by encoding domain concepts and scenarios. We know how to do this using ADTs and regular types—we're all familiar with domain modeling at the value level. But what does it take to go fully type-level? How powerful can our models be?
 
@@ -125,7 +126,7 @@ Currently, type-level domain modeling in Rust includes:
 
 Since I’m not aiming to repeat my entire *PTLD* book here, let’s jump straight to type-level interfaces.
 
-### **Domain modeling with type-level interfaces**
+## **Domain modeling with type-level interfaces**
 
 Let’s examine the `MoveRouteImpl` user-defined type presented below. It’s based on the type `RouteImpl` that has five fields:
 
@@ -215,9 +216,9 @@ type DeleteGameRouteImpl = RouteImpl<
 
 Here is a picture of this hierarchy.
 
-\<picture\>
+<img title="Types hierarchy" src="https://github.com/graninas/type-level-interfaces-in-rust/blob/99f89879621e26ccda54e2d9e55368432e8af726/images/method_hierarchy.png" width="600"></a>
 
-### **Type-level interfacing mechanism**
+## **Type-level interfacing mechanism**
 
 This interesting trait is a key to the approach:
 
@@ -291,7 +292,7 @@ struct NotPossibleWithTraits<
 
 In contrast, I use a first-class type-level tag, `IFormat`. I can simply declare a list as `HList<IFormat>` or a field as `IInterface<IFormat>`. This mechanism—combining `IInterface`, `ISomeKind`, and `Wrapper`—proves to be both powerful and more concise.
 
-### **Interpretation and the universal evaluation mechanism**
+## **Interpretation and the universal evaluation mechanism**
 
 The type-level model of an HTTP API and the type-level *Game of Life* rule don’t do anything on their own—they are just types. The real work is yet to come. Our models are declarative, interpretable eDSLs, so to make them useful, we need to interpret them.
 
@@ -435,9 +436,9 @@ Finally, this approach **solves the Expression Problem**. New nouns (*additional
 
 This **noun-verb extensibility** may not always be the most convenient, but it comes naturally—*for free*—in any language that supports the type-level interfaces approach.
 
-picture
+<img title="Types hierarchy" src="https://github.com/graninas/type-level-interfaces-in-rust/blob/99f89879621e26ccda54e2d9e55368432e8af726/images/noun_verb_extensibility.png" width="600"></a>
 
-### **Conclusion**
+## **Conclusion**
 
 Type-level programming is not easy. I’ve only scratched the surface, but many important topics remain unexplored:
 
@@ -456,9 +457,9 @@ If *PTLD* reaches **1,000 readers** (*which is a lot!*), I’ll add four more ch
 
 I’m also considering writing a **dedicated book on type-level programming in Rust**, but I can only do that if there’s clear commercial potential. Writing advanced, rare books is incredibly time-consuming and expensive. If you want to see more work like this, please support my current book—it benefits everyone.
 
-[Pragmatic Type-Level Design (LeanPub, 2024)](https://leanpub.com/pragmatic-type-level-design)
-[PTLD's repo](https://github.com/graninas/Pragmatic-Type-Level-Design)
-[Functional Design and Architecture: Examples in Haskell (Manning Publications, 2024)](https://www.manning.com/books/functional-design-and-architecture)
+* [Pragmatic Type-Level Design (LeanPub, 2024)](https://leanpub.com/pragmatic-type-level-design)
+* [PTLD's repo](https://github.com/graninas/Pragmatic-Type-Level-Design)
+* [Functional Design and Architecture: Examples in Haskell (Manning Publications, 2024)](https://www.manning.com/books/functional-design-and-architecture)
 
 **Contact me**
 
