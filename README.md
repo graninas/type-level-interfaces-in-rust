@@ -1,5 +1,9 @@
 # Type-level interfaces in Rust
 
+## Abstract
+
+Type-level interfaces are an approach for making extensible and modular type-level eDSLs. This article demonstrates the approach in Rust.
+
 ## Table of Contents
 
 * [Intro](#Intro)
@@ -463,7 +467,7 @@ I’m also considering writing a **dedicated book on type-level programming in R
 * [PTLD's repo](https://github.com/graninas/Pragmatic-Type-Level-Design)
 * [Functional Design and Architecture: Examples in Haskell (Manning Publications, 2024)](https://www.manning.com/books/functional-design-and-architecture)
 
-**Contact me**
+## Contact me
 
 * X: @graninas
 * LinkedIn: [linkedin.com/in/graninas](https://www.linkedin.com/in/graninas)
