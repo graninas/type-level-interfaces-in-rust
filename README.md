@@ -135,8 +135,8 @@ Looking at the examples above, we can see that type-level domain modeling in Rus
 Currently, type-level domain modeling in Rust includes:
 
 * **Type-level constants:** Integers, booleans, and characters.
-* **Type-level collections:** Typically lists and trees. Rust doesn’t support type-level collections natively, so we’ll need to implement a custom list. With macros, usage can be made relatively convenient.
-* **Type-level strings:** Rust lacks built-in support for these. My approach is straightforward—type-level strings are simply lists of type-level characters. Some macros provide a more ergonomic syntax.
+* **Type-level collections:** Typically lists and trees. Rust doesn’t support type-level collections natively, so we’ll need to implement a custom list. With macros, usage can be made relatively convenient. (*Not in this post, though*)
+* **Type-level strings:** Rust lacks built-in support for these. My approach is straightforward—type-level strings are simply lists of type-level characters. Some macros provide a more ergonomic syntax. (*Not in this post, though*)
 * **Type-level records:** Empty structs with type parameters as fields.
 * **Type-level interfaces:** We’ll use them to group certain user-defined types under an abstract umbrella, thus making them interchangeable. Fields in type-level structs will primarily reference these interfaces rather than concrete types. Additionally, type-level interfaces will integrate with type-level lists to enforce type safety.
 
