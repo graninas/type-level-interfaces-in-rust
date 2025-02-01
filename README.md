@@ -118,8 +118,8 @@ What can a type-level *Servant* do that *Axum* cannot? Perhaps its biggest advan
 Type-level eDSLs have several properties that make them particularly useful in certain cases:
 
 * **Expressive and declarative.** You can build a fully type-level domain model that purely and declaratively captures the essence of your domain.
-* **Noun-extensible.** New domain concepts—such as a new automaton state or HTTP method—can be introduced independently of existing ones. There's no need to modify your current model; new nouns naturally integrate, thanks to type-level interfaces.
 * **Interpreted.** Once you have a type-level model, you can interpret it into something operational. For my showcase HTTP eDSL, I wrote two interpreters: one targeting the *Axum* runtime and another for *tiny-http*.
+* **Noun-extensible.** New domain concepts—such as a new automaton state or HTTP method—can be introduced independently of existing ones. There's no need to modify your current model; new nouns naturally integrate, thanks to type-level interfaces.
 * **Verb-extensible.** New ways to interpret your type-level eDSL (new verbs) can be introduced independently. For example, you can introspect your HTTP API into OpenAPI, convert it into a string, or generate documentation—without affecting other interpreters. *(We’ll explore this noun-verb extensibility later in the article.)*
 * **Type-safe.** Type-level lists accept only elements that conform to a specific type-level interface, ensuring that invalid notions are rejected. The same applies to type-level data fields—if a field is declared as a method (using the corresponding type-level interface), only methods can be assigned to it.
 * **Making invalid states unrepresentable.** Design your domain model in a way that statically prevents inconsistent, absurd, or meaningless data.
