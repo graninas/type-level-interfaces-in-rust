@@ -4,6 +4,8 @@
 
 Type-level interfaces are an approach for making extensible and modular type-level eDSLs. Type-level interfaces make type-level programming simple and understandable. This article demonstrates the approach in Rust.
 
+This post accompanies my recent talk at Functional Conf 2025: *Type-Level Interfaces in Haskell and Rust: Pragmatic Type-Level programming* ([video](https://youtu.be/vKAuSD0RnmY?si=qFyNoWf8M8_IObuO), [slides](https://docs.google.com/presentation/d/1Pi_p_a8Wvbl1MXNl_VsDMxcsSYq8FUPghZk8seVOvcs/edit?usp=sharing), [code](https://github.com/graninas/Pragmatic-Type-Level-Design/tree/96f16ab0c9d23e407653869801725b8cca130356/First-Edition/functional_conf_2025)).
+
 ## Table of Contents
 
 * [Intro](#Intro)
@@ -23,8 +25,6 @@ Type-level interfaces are an approach for making extensible and modular type-lev
 I invented type-level interfaces for Haskell, Rust, and Scala 3 while working on my third book, [*Pragmatic Type-Level Design*](https://leanpub.com/pragmatic-type-level-design) (Leanpub, 2024). My goal was to make type-level programming simple, approachable, and practical—and I succeeded in all three languages. Type-level programming is no longer dark magic. With my universal methodology, you can start crafting useful applications based on powerful, compile-time, statically verifiable, and truly extensible type-level eDSLs.
 
 This post briefly outlines the approach. I omit many details here; consider reading *Pragmatic Type-Level Design*. Its model language is Haskell, but there are special Rosetta Stone chapters with Rust and Scala 3. You can buy it on Leanpub with today’s special 33% discount using [this link](https://leanpub.com/pragmatic-type-level-design/c/rust_promo_33) (valid through 2025-02-04). If you're unsure, you can first download a substantial 110-page free sample chapter and decide.
-
-This post accompanies my recent talk at Functional Conf 2025: *Type-Level Interfaces in Haskell and Rust: Pragmatic Type-Level programming* ([video](https://youtu.be/vKAuSD0RnmY?si=qFyNoWf8M8_IObuO), [slides](https://docs.google.com/presentation/d/1Pi_p_a8Wvbl1MXNl_VsDMxcsSYq8FUPghZk8seVOvcs/edit?usp=sharing), [code](https://github.com/graninas/Pragmatic-Type-Level-Design/tree/96f16ab0c9d23e407653869801725b8cca130356/First-Edition/functional_conf_2025)).
 
 I’m also the author of *Functional Design and Architecture* (Manning Publications, 2024), a deep and advanced book that I can’t help but recommend. It’s a great resource for those who love functional programming and want to explore practical approaches structured into comprehensive, well-organized knowledge. My goal was ambitious: to consolidate FP ideas into a methodology that could finally serve as a true counterpart to Object-Oriented Design. I call it *Functional Declarative Design*—the missing link between functional programming and software engineering. You can buy FDaA at [Manning](https://www.manning.com/books/functional-design-and-architecture) or on [Amazon](https://www.amazon.com/Functional-Design-Architecture-Alexander-Granin/dp/1617299618).
 
