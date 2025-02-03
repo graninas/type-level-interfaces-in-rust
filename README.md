@@ -180,7 +180,7 @@ It’s a parameterized struct with five type parameters. These type parameters f
 
 `IMethod`, `IType`, `IFormat`, and `IClause` are domain-specific kinds that I, as the developer, define for my types. *(And for those wondering—yes, this effectively serves as a working kind system in Rust.)* Finally, `TlStr` designates a field for a type-level string.
 
-`IInterface<T>`, `HList<T>`, and `TlStr` are special traits from my type-level library (soon available in crates).
+`IInterface<T>`, `HList<T>`, and `TlStr` are special traits from my type-level libraries ([tl_interface](https://crates.io/crates/tl_interface)).
 
 Kinds are just empty structs:
 
