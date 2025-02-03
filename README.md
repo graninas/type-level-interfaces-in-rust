@@ -13,6 +13,7 @@ Type-level interfaces are an approach for making extensible and modular type-lev
 * [Domain modeling with type-level interfaces](#Domain-modeling-with-type-level-interfaces)
 * [Type-level interfacing mechanism](#Type-level-interfacing-mechanism)
 * [Interpretation and the universal evaluation mechanism](#Interpretation-and-the-universal-evaluation-mechanism)
+* [Drawbacks and implications](#Drawbacks-and-implications)
 * [Conclusion](#Conclusion)
 * [Further reading](#Further-reading)
 * [Contact me](#Contact-me)
@@ -453,6 +454,22 @@ Finally, this approach **solves the Expression Problem**. New nouns (*additional
 This **noun-verb extensibility** may not always be the most convenient, but it comes naturally—*for free*—in any language that supports the type-level interfaces approach.
 
 <img title="Types hierarchy" src="https://github.com/graninas/type-level-interfaces-in-rust/blob/99f89879621e26ccda54e2d9e55368432e8af726/images/noun_verb_extensibility.png" width="600"></a>
+
+## **Drawbacks and implications**
+
+As type-level programming isn't free in terms of complexity, the approach also has some implications to remember:
+
+* **Big type-level domain models are risky.** More often, value-level domain models are easier to refactor and work with.
+* **Compiler's limitations.** Big types in Rust may eventually hit the limits of the compiler, such as the number of type parameters in structure and recursion depth.
+* **Compilation times.** While compilation is fast, adding algorithmic checks to the type-level models might slow it down drastically.
+* **Accidental complexity and clumsiness.** Type-levelness brings some significant complexity to your project. The approach is designed to be easy for all, but the overall experience with imperfect type-level programming in Rust may sometimes be unpleasant.
+
+Use this approach when you are really sure you need all those advantages I named:
+
+* **High level of static extensibility**
+* **Correctness verification and making invalid states unrepresentable**
+* **Not big domain models**
+* **Introspection of the model and compile-time transformations into another representation**
 
 ## **Conclusion**
 
