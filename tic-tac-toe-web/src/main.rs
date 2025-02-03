@@ -2,12 +2,12 @@ use tl_list_lib::tl_list;
 use tl_list_lib::HList;
 use tl_list_lib::TlN_;
 use tl_list_lib::TlC_;
-use type_level::IInterface;
-use type_level::Wrapper;
+use tl_interface::IInterface;
+use tl_interface::Wrapper;
 use tl_str_list::TlStr;
 use tl_str_macro::tl_str;
-use type_level::EvalCtx;
-use type_level::Eval;
+use tl_interface::EvalCtx;
+use tl_interface::Eval;
 
 use std::marker::PhantomData;
 
@@ -593,6 +593,7 @@ const TIC_TAC_TOE_API_2_TEST: PhantomData<TicTacToeAPI2> = PhantomData;
 const BIG_TYPE_LEVEL_MODEL_TEST: PhantomData<BigTypeLevelModel> = PhantomData;
 
 
+// Naive kinds example 1
 trait BoolKind {}
 
 struct True;
@@ -609,7 +610,7 @@ struct RWPermissions<
 type MyPermissions = RWPermissions<True, False>;
 
 
-
+// Naive kinds example 2
 trait FormatKind {}
 
 struct FormatJSON;
@@ -624,17 +625,3 @@ impl FormatKind for FormatPlainText {}
 //     Formats: HList<FormatKind>,     // Won't compile
 //     Flags: HList<BoolKind>>         // Won't compile
 //   (PhantomData::<(Formats)>);
-
-
-
-// trait InterpretRouteToTinyHttp ...
-// trait InterpretMethodToTinyHttp ...
-// trait InterpretFormatToTinyHttp ...
-// trait InterpretTypeToTinyHttp ...
-// trait InterpretClauseToTinyHttp ...
-
-// trait InterpretRouteToAxum ...
-// trait InterpretMethodToAxum ...
-// trait InterpretFormatToAxum ...
-// trait InterpretTypeToAxum ...
-// trait InterpretClauseToAxum ...
